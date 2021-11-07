@@ -1,7 +1,7 @@
 {
-  "name": "material-kit-react",
+  "name": "athulyas-world",
   "version": "1.10.0",
-  "description": "Material Kit React. Coded by Creative Tim",
+  "description": "Athulya's World. Coded by Athulya Saravanakumar",
   "private": true,
   "main": "src/index.js",
   "dependencies": {
