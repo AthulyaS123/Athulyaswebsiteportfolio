@@ -21,6 +21,7 @@ import Button from "components/CustomButtons/Button.js";
 import styles from "assets/jss/material-kit-react/components/headerLinksStyle.js";
 import "views/Components/Sections/SectionBasics"
 import Favorite from "@material-ui/icons/Favorite";
+import CustomDropdown from "components/CustomDropdown/CustomDropdown";
 
 const useStyles = makeStyles(styles);
 
@@ -28,9 +29,41 @@ export default function HeaderLinks(props) {
   const classes = useStyles();
   return (
 
-    <List className={classes.list}>
+  <List className={classes.list}>
+      <ListItem className={classes.listItem}>
+        <CustomDropdown
+          noLiPadding
+          buttonText="About Me"
+          buttonProps={{
+            className: classes.navLink,
+            color: "transparent",
+          }}
+          buttonIcon={Favorite}
+          dropdownList={[
+            <a
+              href="#athulya"
+              className={classes.dropdownLink}>
+              Who am I
+            </a>,
+                      <a
+                      href="#awards"
+                      className={classes.dropdownLink}
+                      >
+                      Awards/Experience/Projects
+                      </a>,
+            <a
+            href="#aboutMe"
+            className={classes.dropdownLink}
+          >
+            Programming/Skills
+            </a>,
+                    
+            
+          ]}
+        />
+      </ListItem>
 
-<ListItem className={classes.listItem}>
+{/* <ListItem className={classes.listItem}>
         <Tooltip
           id="aboutme"
           title="All About Me!"
@@ -45,7 +78,7 @@ export default function HeaderLinks(props) {
         <Favorite className={classes.icons} />          
         </Button>
         </Tooltip>
-      </ListItem>
+  </ListItem> */}
 
       <ListItem className={classes.listItem}>
         <Tooltip
