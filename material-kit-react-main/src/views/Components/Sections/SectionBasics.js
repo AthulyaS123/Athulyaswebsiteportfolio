@@ -12,6 +12,10 @@ import Badge from "components/Badge/Badge.js";
 import styles from "assets/jss/material-kit-react/views/componentsSections/basicsStyle.js";
 import Grade from "@material-ui/icons/Grade";
 import Person from "@material-ui/icons/Person";
+import PanTool from "@material-ui/icons/Build"
+import CS from "@material-ui/icons/Laptop"
+import Robo from "@material-ui/icons/Settings"
+
 import NavPills from "components/NavPills/NavPills.js";
 
 // import studio1 from "assets/img/examples/studio-1.jpg";
@@ -34,6 +38,9 @@ import Parallax from "components/Parallax/Parallax.js";
 import ReactPlayer from "react-player"
 
 import {useInput} from './useInput';
+import Quote from "components/Typography/Quote";
+import Warning from "components/Typography/Warning";
+
 
 
 const useStyles = makeStyles(styles);
@@ -99,7 +106,7 @@ export default function SectionBasics() {
           <br />
           <br />
           <br />
-          <div id="athulya"><h8><small>.</small></h8></div> 
+          <div id="athulya"><h6><small>.</small></h6></div> 
           <br />
           <br />
         </div>
@@ -107,12 +114,21 @@ export default function SectionBasics() {
           <div className={classes.title}>
             <h3>
               Athulya is a junior at Dulles High School. She became interested and began coding at only 8 years old.
-              She is on the FIRST Robotics team, Computer Science, Mu Alpha Theta, and founder of
-              the Coding for Medicine club at her school. She is the first and only female programmer at her robotics club and team. She has grown to become a lead for programming. She is compassionate,
+              She is on the FIRST Robotics team, Computer Science, Mu Alpha Theta, Girl Bytes, and founder of
+              the Coding for Medicine club at her school. 
+              <br />
+              <br />
+              <Warning>
+              <Quote
+                text="Athulya is the 1st and only female programmer we have had since we started FIRST Robotics teams in 2016. She is now leading our programming teams."
+                author="Dulles Robotics"
+              />
+              </Warning>
+              She has grown to become a lead for programming. She is compassionate,
               hardworking, and loves to work with others. She is very passionate
               to continue developing her programming skills while spreading the
               knowledge of STEM to others and encouraging women in STEM.
-              <div id="awards"><h8><small>.</small></h8></div>
+              <div id="awards"><h6><small>.</small></h6></div>
             </h3>
             <div className={classNames(classes.main, classes.mainRaised)}>
           <div >
@@ -124,41 +140,75 @@ export default function SectionBasics() {
                   color="primary"
                   tabs={[
                     {
-                      tabButton: "Awards",
-                      tabIcon: Grade,
+                      tabButton: "Skills",
+                      tabIcon: PanTool,
                       tabContent: (
-                        <GridContainer justify="center">
-                          <GridItem xs={12} sm={12} md={12}>
-                            <h3>FIRST Tech Challenge Dean's List Finalist <small> - 05/2021</small></h3>
-                            <br />
-                            <h3>FIRST Tech Challenge Regional Championships - Qualify for State <small> - 05/2021</small></h3>
-                            <br />
-                            <h3>FIRST Tech Challenge Inspire Award <small> - 05/2021</small></h3>
-                            <br />
-                            <h3>FIRST Tech Challenge Control Award <small> - 05/2021</small></h3>
-                            <br />
-                            <h3>NCWIT Houston Affiliate<small> - 2020-2021</small></h3>
-                            <br />
-                            <h3>Digital Divas Regional HackerRank 2nd Place<small> - 03/2021</small></h3>
-                            <br />
-                            <h3>USACO Bronze<small> - 01/2021</small></h3>
-                            <br />
-                            <h3>NCWIT Houston Affiliate<small> - 2019-2020</small></h3>
-                            <br />
-                            <h3>FIRST Robotics Challenge District Engineering Inspiration Award<small> - 2019-2020</small></h3>
-                            <br />
-                            <h3>FIRST Robotics Challenge Safety Award<small> - 2019-2020</small></h3>
-                            <br />
-                            <h3>FIRST Tech Challenge Collins Aerospace Innovate Award<small> - 2019-2020</small></h3>
-                            <br />
-                            <h3>FIRST Tech Challenge Control Award <small> - 2019-2020</small></h3>
-                            <br />
-                            <h3>FRC Regional Compeition <small> 2020 </small></h3>
-                          <ReactPlayer
-                          url="https://youtu.be/jbo6bE3lYoE"
-                          />
-                          </GridItem>
-                        </GridContainer>
+                          <GridContainer>
+                            <GridItem xs={12} sm={12} md={6}>
+                              <div className={classes.title}>
+                                <h3>Programming</h3>
+                              </div>
+                              <h4> Java</h4>
+                              <CustomLinearProgress
+                                variant="determinate"
+                                color="primary"
+                                value={80}
+                              />
+                              <h4>Python</h4>
+                              <CustomLinearProgress
+                                variant="determinate"
+                                color="rose"
+                                value={60}
+                              />
+                              <h4>C</h4>
+                              <CustomLinearProgress
+                                variant="determinate"
+                                color="info"
+                                value={40}
+                              />
+                              <h4>JavaScript/HTML/CSS</h4>
+                              <CustomLinearProgress
+                                variant="determinate"
+                                color="success"
+                                value={30}
+                              />
+                            </GridItem>
+                            <GridItem xs={6} sm={6} md={6}>
+                              <div className={classes.title}>
+                                <h3> Skills </h3>
+                              </div>
+                              <h4>Programming Languages</h4>
+                              <Badge color="primary">Java</Badge>
+                              <Badge color="info">Python</Badge>
+                              <Badge color="success">JavaScript</Badge>
+                              <Badge color="warning">HTML</Badge>
+                              <Badge color="danger">CSS</Badge>
+                              <Badge color="rose">C</Badge>
+                              <Badge color="primary">BioPython</Badge>
+                              <Badge color="primary">Material UI</Badge>
+                              <Badge color="info">React</Badge>
+                              <Badge color="success">Heroku</Badge>
+                              <Badge color="warning">Git</Badge>
+                              <Badge color="danger">Github</Badge>
+                              <br />
+                              <h4>Software</h4>
+                              <Badge color="primary">Andriod Studio</Badge>
+                              <Badge color="info">Intelji</Badge>
+                              <Badge color="warning">Visual Studio</Badge>
+                              <Badge color="danger">JGrasp </Badge>
+                              <br />
+                              <h4>Hardware</h4>
+                              <Badge color="primary">Rev Robotics</Badge>
+                              <Badge color="info">Arduino</Badge>
+                              <Badge color="success">Lime Light</Badge>
+                              <br />
+                              <h4>Nontechnical</h4>
+                              <Badge color="primary">Public Speaking</Badge>
+                              <Badge color="info">Presentation</Badge>
+                              <Badge color="rose">Marketing</Badge>
+                              <Badge color="danger">Business</Badge>
+                            </GridItem>
+                          </GridContainer>
                       ),
                     },
                     {
@@ -167,17 +217,17 @@ export default function SectionBasics() {
                       tabContent: (
                         <GridContainer  justify="center">
                           <GridItem xs={12} sm={12} md={12}>
-                            <h2><Work /> Work Experience</h2>
-                            <h3> Codeverse - Rank 1 Guide <small>05/2021 - Present</small></h3>
+                           <h2> <Work style={{fill: "blue"}}/> Work Experience </h2>
+                           <Warning><h3> Codeverse: Rank 1 Instructor <small>05/2021 - Present</small></h3></Warning>
                             <br />
-                            <h2><PersonOutline />Leadership</h2>
+                            <h2><PersonOutline style={{fill: "blue"}} /> Leadership</h2>
                             <h3> FIRST Tech Challenge Team #13822 and Dulles Robotics: Programming Lead <small> - 2019 - Present</small></h3>
                             <h3> Dulles Robotics: Presentation and Outreach Lead<small> - 2020 - Present</small></h3>
                             <h3> Dulles Coding For Medicine Club: Founder and Vice President<small> - 2020 - Present</small></h3>
                             <h3> Mu Alpha Theta Honor Society: Volunteer Manager <small> - 2020 - Present</small></h3>
                             <h3> Dulles Computer Science: Novice Coach <small> - 2021 - Present</small></h3>
                             <br />
-                            <h2><Favorite/>Volunteering</h2>
+                            <h2><Favorite style={{fill: "blue"}}/> Volunteering</h2>
                             <h3> FIRST Scratch Camp: Event Coordinator <small> 08/2020</small></h3>
                             <h3> Girl Bytes Programming Workshops: Instructor <small> - 2021 - Present</small></h3>
                             <h3> First Colony Library Robotics Workshop: Instructor <small> - 2021 - Present</small></h3>
@@ -197,22 +247,25 @@ export default function SectionBasics() {
                       tabContent: (
                         <GridContainer justify="center">
                           <GridItem xs={12} sm={12} md={12}>
-                            <h2>Robotics</h2>
-                            <br />
+                            <h2><Robo style={{fill: "blue"}} /> Robotics</h2>
                             <h3>Autonomous Robot - AI & Object Detection <small> 05/2021</small></h3>
                           <ReactPlayer
                           url="https://youtu.be/EUpkt1JOcjc"
                           />
                         <br />
+                        <h3>Lime Light Detection + some team spirit :)</h3>
+                        <ReactPlayer
+                            url="https://youtu.be/jbo6bE3lYoE"
+                            />
+                            <br />
                           <h3>NASA TechRise - Landing Systems<small> 2021-2023</small></h3>
                           <br />
-                          <h2>Computer Science</h2>
-                          <br />
+                          <h2><CS  style={{fill: "blue"}}/> Computer Science</h2>
                           <h3>Coding For Medicine Scholarly Research Project<small> 2021-2022</small></h3>
                           <br />
-                          <h3>This Website! - coded by me using JavaScript and Material UI<small> 10/2021</small></h3>
+                          <h3>Athulya's World Website (this one!) <small> - (coded using JavaScript)</small> <small> 10/2021</small></h3>
                           <br />
-                          <h3>Computer Science Club Website<small> 2021</small></h3>
+                          <h3>Computer Science Club Website <small> - (coded using JavaScript)</small> <small> 2021</small></h3>
                           <Button
                             color="rose"
                             size="lg"
@@ -229,6 +282,32 @@ export default function SectionBasics() {
                         </GridContainer>
                       ),
                     },
+                    {
+                      tabButton: "Awards",
+                      tabIcon: Grade,
+                      tabContent: (
+                        <GridContainer justify="center">
+                          <GridItem xs={12} sm={12} md={12}>
+                            <h2><Robo style={{fill: "blue"}} /> Robotics</h2>
+                            <Warning><h3>FIRST Tech Challenge Dean's List Finalist <small> - 05/2021</small></h3></Warning>
+                            <h3>FIRST Tech Challenge Regional Championships - Qualify for State <small> - 05/2021</small></h3>
+                            <h3>FIRST Tech Challenge Inspire Award <small> - 05/2021</small></h3>
+                            <h3>FIRST Tech Challenge Control Award <small> - 05/2021</small></h3>
+                            <h3>FIRST Robotics Challenge District Engineering Inspiration Award<small> - 2019-2020</small></h3>
+                            <h3>FIRST Robotics Challenge Safety Award<small> - 2019-2020</small></h3>
+                            <h3>FIRST Tech Challenge Collins Aerospace Innovate Award<small> - 2019-2020</small></h3>
+                            <h3>FIRST Tech Challenge Control Award <small> - 2019-2020</small></h3>
+                          <br />
+                          <h2><CS style={{fill: "blue"}} /> Computer Science</h2>
+                         <Warning> <h3>Digital Divas HackerRank 2nd Place<small> - 03/2021</small></h3> </Warning>
+                            <h3>USACO Bronze<small> - 01/2021</small></h3>
+                            <h3>NCWIT Houston Affiliate<small> - 2020-2021</small></h3>
+                            <h3>NCWIT Houston Affiliate<small> - 2019-2020</small></h3>
+                          </GridItem>
+                        </GridContainer>
+                      ),
+                    },
+                    
                   ]}
                 />
               </GridItem>
@@ -236,7 +315,7 @@ export default function SectionBasics() {
             </div>
       </div>
     </div>
-        <div id="aboutMe" className={classes.space70} />
+        {/* <div id="aboutMe" className={classes.space70} />
         <div id="progress">
           <GridContainer>
             <GridItem xs={12} sm={12} md={6}>
@@ -280,6 +359,11 @@ export default function SectionBasics() {
               <Badge color="danger">CSS</Badge>
               <Badge color="rose">C</Badge>
               <Badge color="primary">BioPython</Badge>
+              <Badge color="primary">Material UI</Badge>
+              <Badge color="info">React</Badge>
+              <Badge color="success">Heroku</Badge>
+              <Badge color="warning">Git</Badge>
+              <Badge color="danger">Github</Badge>
               <br />
               <h4>Software</h4>
               <Badge color="primary">Andriod Studio</Badge>
@@ -296,7 +380,7 @@ export default function SectionBasics() {
           </GridContainer>
         </div>
       </div>
-      
+       */}
         {/* <div className={classes.section}>
       <div className={classes.container}>
         <GridContainer>
@@ -402,5 +486,7 @@ export default function SectionBasics() {
     </div>
     </div>
     </div>
+    </div>
+
   );
 }
