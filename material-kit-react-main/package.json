@@ -1,5 +1,6 @@
 {
-  "name": "athulyas-world",
+  "name": "material-kit-react",
+  "homepage": "https://github.com/AthulyaS123/Athulyaswebsiteportfolio",
   "version": "1.10.0",
   "description": "Athulya's World. Coded by Athulya Saravanakumar",
   "private": true,
@@ -11,8 +12,9 @@
     "classnames": "2.3.1",
     "emailjs": "^3.6.0",
     "emailjs-com": "^3.2.0",
+    "gh-pages": "^3.2.3",
     "moment": "2.29.1",
-    "node-sass": "6.0.0",
+    "node-sass": "^6.0.1",
     "nouislider": "15.1.0",
     "prop-types": "15.7.2",
     "react": "^17.0.2",
@@ -41,6 +43,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build && gulp licenses",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
