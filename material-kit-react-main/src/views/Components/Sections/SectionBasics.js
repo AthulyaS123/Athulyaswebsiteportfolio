@@ -23,8 +23,6 @@ import Button from "components/CustomButtons/Button.js"
 import Work from "@material-ui/icons/Work";
 import PersonOutline from "@material-ui/icons/PersonOutline";
 import Favorite from "@material-ui/icons/Favorite";
-import Parallax from "components/Parallax/Parallax.js";
-
 
 // import Card from "components/Card/Card.js";
 // import image1 from "assets/img/bg.jpg";
@@ -70,40 +68,14 @@ export default function SectionBasics() {
   
   return (
     <div className={classes.sections}>
-            <div className={classes.title}>
-            <div className={classes.container}>
-      <h2>Who is Athulya?</h2>
-      </div> 
-      </div>
-            <Parallax image={require("assets/img/womaninstem.jpg").default}></Parallax>
       <div className={classes.container}>
         <div className={classes.title} >
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <div id="athulya"><h8><small>.</small></h8></div> 
-          <br />
-          <br />
+          <h2>Who is Athulya?</h2>
+          <div className="neonlight">
+              
+          </div>
         </div>
-        <div >
+        <div id="athulya">
           <div className={classes.title}>
             <h3>
               Athulya is a junior at Dulles High School. She became interested and began coding at only 8 years old.
@@ -112,14 +84,75 @@ export default function SectionBasics() {
               hardworking, and loves to work with others. She is very passionate
               to continue developing her programming skills while spreading the
               knowledge of STEM to others and encouraging women in STEM.
-              <div id="awards"><h8><small>.</small></h8></div>
+
             </h3>
-            <div className={classNames(classes.main, classes.mainRaised)}>
-          <div >
+            <div id="aboutMe" className={classes.space70} />
+        <div id="progress">
+          <GridContainer>
+            <GridItem xs={12} sm={12} md={6}>
+              <div className={classes.title}>
+                <h3>Programming</h3>
+              </div>
+              <h4> Java</h4>
+              <CustomLinearProgress
+                variant="determinate"
+                color="primary"
+                value={80}
+              />
+              <h4>Python</h4>
+              <CustomLinearProgress
+                variant="determinate"
+                color="rose"
+                value={60}
+              />
+              <h4>C</h4>
+              <CustomLinearProgress
+                variant="determinate"
+                color="info"
+                value={40}
+              />
+              <h4>JavaScript/HTML/CSS</h4>
+              <CustomLinearProgress
+                variant="determinate"
+                color="success"
+                value={30}
+              />
+            </GridItem>
+            <GridItem xs={6} sm={6} md={6}>
+              <div className={classes.title}>
+                <h3> Skills </h3>
+              </div>
+              <h4>Programming Languages</h4>
+              <Badge color="primary">Java</Badge>
+              <Badge color="info">Python</Badge>
+              <Badge color="success">JavaScript</Badge>
+              <Badge color="warning">HTML</Badge>
+              <Badge color="danger">CSS</Badge>
+              <Badge color="rose">C</Badge>
+              <Badge color="primary">BioPython</Badge>
+              <br />
+              <h4>Software</h4>
+              <Badge color="primary">Andriod Studio</Badge>
+              <Badge color="info">Intelji</Badge>
+              <Badge color="warning">Visual Studio</Badge>
+              <Badge color="danger">JGrasp </Badge>
+              <br />
+              <h4>Nontechnical</h4>
+              <Badge color="primary">Public Speaking</Badge>
+              <Badge color="info">Presentation</Badge>
+              <Badge color="warning">Marketing</Badge>
+              <Badge color="danger">Business</Badge>
+            </GridItem>
+            
+          </GridContainer>
+        </div>
+      </div>
+      <div  className={classNames(classes.main, classes.mainRaised)}>
+          <div>
           <div className={classes.container}>  
-          <GridContainer  justify="center">
+          <GridContainer justify="center">
               <GridItem xs={12} sm={12} md={8} className={classes.navWrapper}>
-                <NavPills 
+                <NavPills
                   alignCenter
                   color="primary"
                   tabs={[
@@ -165,7 +198,7 @@ export default function SectionBasics() {
                       tabButton: "Experience",
                       tabIcon: Person,
                       tabContent: (
-                        <GridContainer  justify="center">
+                        <GridContainer justify="center">
                           <GridItem xs={12} sm={12} md={12}>
                             <h2><Work /> Work Experience</h2>
                             <h3> Codeverse - Rank 1 Guide <small>05/2021 - Present</small></h3>
@@ -236,67 +269,6 @@ export default function SectionBasics() {
             </div>
       </div>
     </div>
-        <div id="aboutMe" className={classes.space70} />
-        <div id="progress">
-          <GridContainer>
-            <GridItem xs={12} sm={12} md={6}>
-              <div className={classes.title}>
-                <h3>Programming</h3>
-              </div>
-              <h4> Java</h4>
-              <CustomLinearProgress
-                variant="determinate"
-                color="primary"
-                value={80}
-              />
-              <h4>Python</h4>
-              <CustomLinearProgress
-                variant="determinate"
-                color="rose"
-                value={60}
-              />
-              <h4>C</h4>
-              <CustomLinearProgress
-                variant="determinate"
-                color="info"
-                value={40}
-              />
-              <h4>JavaScript/HTML/CSS</h4>
-              <CustomLinearProgress
-                variant="determinate"
-                color="success"
-                value={30}
-              />
-            </GridItem>
-            <GridItem xs={6} sm={6} md={6}>
-              <div className={classes.title}>
-                <h3> Skills </h3>
-              </div>
-              <h4>Programming Languages</h4>
-              <Badge color="primary">Java</Badge>
-              <Badge color="info">Python</Badge>
-              <Badge color="success">JavaScript</Badge>
-              <Badge color="warning">HTML</Badge>
-              <Badge color="danger">CSS</Badge>
-              <Badge color="rose">C</Badge>
-              <Badge color="primary">BioPython</Badge>
-              <br />
-              <h4>Software</h4>
-              <Badge color="primary">Andriod Studio</Badge>
-              <Badge color="info">Intelji</Badge>
-              <Badge color="warning">Visual Studio</Badge>
-              <Badge color="danger">JGrasp </Badge>
-              <br />
-              <h4>Nontechnical</h4>
-              <Badge color="primary">Public Speaking</Badge>
-              <Badge color="info">Presentation</Badge>
-              <Badge color="warning">Marketing</Badge>
-              <Badge color="danger">Business</Badge>
-            </GridItem>
-          </GridContainer>
-        </div>
-      </div>
-      
         {/* <div className={classes.section}>
       <div className={classes.container}>
         <GridContainer>
