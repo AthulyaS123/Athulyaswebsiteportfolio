@@ -298,7 +298,6 @@ export default function SectionBasics() {
                             <h3>FIRST Tech Challenge Collins Aerospace Innovate Award<small> - 2019-2020</small></h3>
                             <h3>FIRST Tech Challenge Control Award <small> - 2019-2020</small></h3>
                           <br />
-                          {/* hello */}
                           <h2><CS style={{fill: "blue"}} /> Computer Science</h2>
                          <Warning> <h3>Digital Divas HackerRank 2nd Place<small> - 03/2021</small></h3> </Warning>
                             <h3>USACO Bronze<small> - 01/2021</small></h3>
