@@ -49,8 +49,14 @@ export default function HeaderLinks(props) {
                       href="#awards"
                       className={classes.dropdownLink}
                       >
-                      Skills, Experience, Awards, & Projects
+                      Awards/Experience/Projects
                       </a>,
+            <a
+            href="#aboutMe"
+            className={classes.dropdownLink}
+          >
+            Programming/Skills
+            </a>,
                     
             
           ]}

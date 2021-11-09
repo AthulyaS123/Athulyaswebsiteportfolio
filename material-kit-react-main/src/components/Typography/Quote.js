@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import React from "react";
 // nodejs library to set properties for components
 import PropTypes from "prop-types";
@@ -14,7 +13,7 @@ export default function Quote(props) {
   const classes = useStyles();
   return (
     <blockquote className={classes.defaultFontStyle + " " + classes.quote}>
-      <h4 className={classes.quoteText}>{text}</h4>
+      <p className={classes.quoteText}>{text}</p>
       <small className={classes.quoteAuthor}>{author}</small>
     </blockquote>
   );
